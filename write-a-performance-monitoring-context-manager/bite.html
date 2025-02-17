@@ -1,0 +1,19 @@
+<p class="text-sm italic text-gray-700 dark:text-white mb-4">
+              Level: Advanced (score: 4)
+            </p>
+<p class="text-gray-700"></p><p>It's time for <em>Context Managers</em> part II. In <a href="../../../../../bites/write-a-context-manager/">Write a context manager</a> you used it to roll back a transaction implementing the <code>__enter__</code> and <code>__exit__</code> dunder methods.</p>
+<p>In this Bite you will write a context manager using <code>contextlib.contextmanager</code> that measures performance of operations executed in its context:</p>
+<pre>with timeit():
+  ... measure time in seconds of the the stuff done in this block ...
+</pre>
+<p>Complete the <code>timeit</code> context manager implementing mentioned timing in seconds (<em>duration</em>).</p>
+<p>Keep track of performance violations which we define as <em>duration &gt;= 2.2 (<code>OPERATION_THRESHOLD_IN_SECONDS</code>)</em>.</p>
+<p>If there are &gt;= 3 (<code>ALERT_THRESHOLD</code>) violations the same day, print <em>ALERT: suffering performance hit today</em> (<code>ALERT_MSG</code>).</p>
+<p>Good luck and keep calm and code in Python!</p><p></p>
+<hr class="my-4 dark:border-gray-900"/>
+<p class="text-gray-700"></p>
+<div class="mt-4">
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/counter">Counter</a>
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/context-managers">context managers</a>
+</div>
+</div>
