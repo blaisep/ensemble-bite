@@ -17,4 +17,16 @@ def get_today():
 
 @contextmanager
 def timeit():
-    pass
+    """"
+    Complete the timeit context manager implementing mentioned timing in seconds (duration).
+    Keep track of performance violations which we define as duration >= 2.2 (OPERATION_THRESHOLD_IN_SECONDS).
+    If there are >= 3 (ALERT_THRESHOLD) violations the same day, print ALERT: suffering performance hit today (ALERT_MSG).
+    """
+    start = time()
+    yield
+    end = time()
+    duration = end - start
+    alerts = 0
+    if duration > OPERATION_THRESHOLD_IN_SECONDS:
+        alerts += 1
+        print("error")
